@@ -1,0 +1,30 @@
+INFO:root:reading rtl_433 finished
+DEBUG:root:data_str: {"time" : "2019-07-14 15:46:44", "model" : "Fineoffset-WHx080", "msg_type" : 0, "id" : 99, "temperature_C" : 21.500, "humidity" : 50, "direction_deg" : 315, "wind_avg_km_h" : 8.568, "wind_max_km_h" : 12.240, "rain_mm" : 48.900, "battery_ok" : 1, "mic" : "CRC"}
+{"time" : "2019-07-14 15:46:44", "model" : "Fineoffset-WHx080", "msg_type" : 0, "id" : 99, "temperature_C" : 21.500, "humidity" : 50, "direction_deg" : 315, "wind_avg_km_h" : 8.568, "wind_max_km_h" : 12.240, "rain_mm" : 48.900, "battery_ok" : 1, "mic" : "CRC"}
+{"time" : "2019-07-14 15:46:44", "model" : "Fineoffset-WHx080", "msg_type" : 0, "id" : 99, "temperature_C" : 21.500, "humidity" : 50, "direction_deg" : 315, "wind_avg_km_h" : 8.568, "wind_max_km_h" : 12.240, "rain_mm" : 48.900, "battery_ok" : 1, "mic" : "CRC"}
+{"time" : "2019-07-14 15:46:44", "model" : "Fineoffset-WHx080", "msg_type" : 0, "id" : 99, "temperature_C" : 21.500, "humidity" : 50, "direction_deg" : 315, "wind_avg_km_h" : 8.568, "wind_max_km_h" : 12.240, "rain_mm" : 48.900, "battery_ok" : 1, "mic" : "CRC"}
+
+INFO:root:pos: 260
+INFO:root:data_str: {"time" : "2019-07-14 15:46:44", "model" : "Fineoffset-WHx080", "msg_type" : 0, "id" : 99, "temperature_C" : 21.500, "humidity" : 50, "direction_deg" : 315, "wind_avg_km_h" : 8.568, "wind_max_km_h" : 12.240, "rain_mm" : 48.900, "battery_ok" : 1, "mic" : "CRC"}
+INFO:root:data_dic: {'temperature_C': 21.5, 'battery_ok': 1, 'model': 'Fineoffset-WHx080', 'humidity': 50, 'wind_max_km_h': 12.24, 'msg_type': 0, 'wind_avg_km_h': 8.568, 'time': '2019-07-14 15:46:44', 'rain_mm': 48.9, 'direction_deg': 315, 'id': 99, 'mic': 'CRC'}
+INFO:root:data_tup: ('2019-07-14 15:46:44', 21.5, 50, 'X', 315, 8.568, 12.24, 48.9, 'batt ok')
+INFO:root:Values from weather station: ('2019-07-14 15:46:44', 21.5, 50, 'X', 315, 8.568, 12.24, 48.9, 'batt ok')
+INFO:root:read weather station: ('2019-07-14 15:46:44', 21.5, 50, 'X', 315, 8.568, 12.24, 48.9, 'batt ok')
+INFO:root:Values from BME280: (26.07, 967.2559, 40.69)
+INFO:root:read raspberry pi pressure sensor: (26.07, 967.2559, 40.69)
+INFO:root:create table if needed
+INFO:root:Function SQLite create_table entered
+INFO:root:Function SQLite create_table left
+INFO:root:Function SQLite data_entry entered
+INFO:root:Function SQLite data_entry left
+INFO:root:put data to SQLite-DB: ('2019-07-14 15:46:44', 21.5, 50, 'X', 315, 8.568, 12.24, 48.9, 'batt ok', 26.07, 967.2559, 40.69)
+INFO:root:Tuple before influx entry: ('2019-07-14 15:46:44', 21.5, 50, 'X', 315, 8.568, 12.24, 48.9, 'batt ok', 26.07, 967.2559, 40.69)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.178.60:8086
+DEBUG:urllib3.connectionpool:http://192.168.178.60:8086 "POST /query?q=CREATE+DATABASE+%22luftdaten%22 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://192.168.178.60:8086 "POST /write?db=luftdaten HTTP/1.1" 204 0
+DEBUG:urllib3.connectionpool:http://192.168.178.60:8086 "GET /query?db=luftdaten&q=SELECT+%2A+FROM+weather+GROUP+BY+%2A+ORDER+BY+DESC+LIMIT+1%3B HTTP/1.1" 200 None
+INFO:root:Read InfluxDB after entry: ResultSet({'('weather', None)': [{'Battery Status': 'batt ok', 'Humidity_inside_pi %r.H.': 40.69, 'Wind Direction': 'X', 'Wind Gust km/h': 12.24, 'Wind Direction degree (int)': 315, 'Humidity_outside_ws %r.H.': 50, 'time': '2019-07-14T13:46:44.782208486Z', 'Rain mm': 48.9, 'Pressure_inside_pi hPa': 967.2559, 'Temperature_outside_ws °C': 21.5, 'Wind speed km/h': 8.568, 'Temperature_inside_pi °C': 26.07, 'Wind Direction degree': '315'}]})
+INFO:root:put data to Influx-DB: ('2019-07-14 15:46:44', 21.5, 50, 'X', 315, 8.568, 12.24, 48.9, 'batt ok', 26.07, 967.2559, 40.69)
+INFO:root:Loop has finished at =============> 2019-07-14 15:46:45.012657
+INFO:root:------------------------------------------------------------------------
+INFO:root:reading rtl_433 started
