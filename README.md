@@ -27,6 +27,6 @@ raspberry pi 3 with mosquitto, sqlite, influxdb, grafana
 
 
 Project status: 
-all components working well, but still on progress
-comming up issues from time to time
+all components working well, but still on progress.
+comming up issues from time to time,
 need to debug 
