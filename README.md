@@ -12,7 +12,7 @@ ESP8266 sends data via wifi to mosquitto server on raspberry pi 3
 Sensor station 2:
 PCE-FWS-20 weather station (outside sensors only) 
 https://www.pce-instruments.com/deutsch/messtechnik/messgeraete-fuer-alle-parameter/umweltmessgeraet-pce-instruments-umweltmessgeraet-pce-fws-20-det_18527.htm?_list=qr.art&_listpos=56
-(cheaper ons on aliexpress)
+(cheaper one on aliexpress)
 
 SDR Receiver 
 DVB-T + DAB + FM + RTL2832U USB 2.0 
